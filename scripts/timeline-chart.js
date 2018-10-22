@@ -97,6 +97,22 @@
             var groupLabels = svg.selectAll('.group-label').data(data).enter().append('text').attr('class', 'group-label').attr('x', 0).attr('y', function (d, i) {
                 return groupHeight * i + groupHeight / 2 + 5.5;
             }).attr('dx', '0.5em').text(function (d) {
+                //     if (d.label) {
+                //     var a = d.label.split(" ");
+                //     var textInput = a[0];
+                //     for (var ii = 1; ii < a.length; ii++) {
+                //         if (ii%2 == 0) {
+                //             textInput += "<br>" + a[ii]
+                //         }
+                //         else {
+                //             textInput += " " + a[ii]
+                //         }
+                //     }
+                //     return textInput;
+                // }
+                // else {
+                //     return d.label;
+                // }
                 return d.label;
             });
 
@@ -140,11 +156,29 @@
                 if (d3.tip) {
                     var tip = d3.tip().attr('class', 'd3-tip').html(options.tip);
                     svg.call(tip);
-                    dots.on('mouseover', tip.show).on('mouseout', tip.hide);
+                    // dots.on('mouseover', tip.show).on('mouseout', tip.hide);
+                    // intervalTexts.on('mouseover', tip.show).on('mouseout', tip.hide);
+                    intervals.on('mouseover', tip.show).on('mouseout', tip.hide);
                 } else {
                     console.error('Please make sure you have d3.tip included as dependency (https://github.com/Caged/d3-tip)');
                 }
             }
+
+            var insertLinebreaks = function (d) {
+                var el = d3.select(this);
+                if (d.label) {
+                    var words = d.label.split(' ');
+                    el.text('');
+
+                    for (var i = 0; i < words.length; i++) {
+                        var tspan = el.append('tspan').text(words[i]);
+                        if (i > 0)
+                            tspan.attr('x', 0).attr('dy', '19').attr('dx','9');
+                    }
+                }
+            };
+
+            svg.selectAll('.group-label').each(insertLinebreaks);
 
             zoomed();
 

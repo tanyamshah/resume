@@ -10,18 +10,6 @@ new fullpage('#fullpage', {
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
 });
 
-// new fullpage('#fullpage', {
-//     anchors: ['home', 'about', 'education','skills', 'connect'],
-//     navigation: true,
-//     sectionsColor: ['#FFFFF', '#FFFFF', '#FFFFF', '#FFFFF', '#FFFFF','#FFFFF', '#FFFFF'],
-// 	autoScrolling: false,
-// 	fitToSection: true,
-// 	scrollbar: true,
-//     navigationPosition: 'right',
-//     navigationTooltips: ['First page', 'About', 'Education','Skills', 'Connect'],
-//     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
-// });
-
 function toggle(isTech) {
 	if(isTech) {
 		$("#techskills").removeClass('inactive-custom');
@@ -118,8 +106,8 @@ const data = [{
     data: [{
         label: 'CEE Volunteer',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2015, 3, 1]),
-        to: new Date([2015, 5, 1]),
+        from: new Date([2015, 4, 1]),
+        to: new Date([2015, 10, 1]),
         customClass: 'grey-interval'
     }, {
         label: 'CEE',
@@ -130,19 +118,19 @@ const data = [{
     }, {
         label: 'MHT',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2016, 2, 1]),
-        to: new Date([2017, 3, 1]),
+        from: new Date([2016, 4, 1]),
+        to: new Date([2017, 5, 1]),
         customClass: 'dark-pink-interval'
     }, {
         label: 'ELARA',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2017, 8, 1]),
-        to: new Date([2018, 5, 1]),
+        from: new Date([2017, 10, 1]),
+        to: new Date([2018, 4, 1]),
         customClass: 'dark-pink-interval'
     }, {
         label: 'SCAG',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2018, 5, 1]),
+        from: new Date([2018, 4, 1]),
         to: new Date([2018, 11, 1]),
         customClass: 'pink-interval'    	
     }]
@@ -151,65 +139,114 @@ const data = [{
     data: [{
         label: 'CoE',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2016, 3, 1]),
-        to: new Date([2016, 5, 1]),
+        from: new Date([2016, 5, 1]),
+        to: new Date([2016, 7, 1]),
         customClass: 'pink-interval'
     }, {
         label: 'Archiprix',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2016, 5, 1]),
+        from: new Date([2016, 8, 1]),
         to: new Date([2017, 2, 1]),
         customClass: 'light-pink-interval'
     },
     {
         label: 'LEED GA',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2018, 4, 1]),
-        to: new Date([2019, 4, 1]),
+        from: new Date([2018, 6, 1]),
+        to: new Date([2020, 6, 1]),
         customClass: 'grey-interval'
     }]	
 },
 {
     label: 'Co-curricular Leadership Roles',
     data: [{
-        type: TimelineChart.TYPE.POINT,
-        at: new Date([2016, 5, 11])
-    }, {
-        type: TimelineChart.TYPE.POINT,
-        at: new Date([2016, 5, 15])
-    }, {
-        type: TimelineChart.TYPE.POINT,
-        at: new Date([2016, 7, 10])
-    }, {
-        label: 'I\'m a label with a custom class',
+        label: 'Placement Coordinator',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2016, 6, 1]),
-        to: new Date([2016, 7, 1]),
-        customClass: 'blue-interval'
+        from: new Date([2016, 3, 1]),
+        to: new Date([2017, 4, 1]),
+        customClass: 'grey-interval'
     }, {
-        type: TimelineChart.TYPE.POINT,
-        at: new Date([2016, 10, 1])
-    }, {
-        type: TimelineChart.TYPE.POINT,
-        at: new Date([2016, 11, 1])
-    }]
+        label: 'PWA Co-Chair',
+        type: TimelineChart.TYPE.INTERVAL,
+        from: new Date([2018, 5, 1]),
+        to: new Date([2019, 4, 1]),
+        customClass: 'grey-interval'
+    }] 
+},
+{
+    data: [{
+        label: 'ASPD Professional Chair',
+        type: TimelineChart.TYPE.INTERVAL,
+        from: new Date([2018, 5, 1]),
+        to: new Date([2019, 4, 1]),
+        customClass: 'light-grey-interval'
+    }] 
+},
+{
+    data: [{
+        label: 'Student Ambassador',
+        type: TimelineChart.TYPE.INTERVAL,
+        from: new Date([2017, 9, 1]),
+        to: new Date([2019, 5, 1]),
+        customClass: 'dark-grey-interval'
+    }] 
 }, {
     label: 'Other Experiences',
     data: [{
-        label: 'Label 1',
+        label: 'CEPT TA',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2016, 5, 15]),
-        to: new Date([2016, 7, 1])
+        from: new Date([2017, 1, 1]),
+        to: new Date([2017, 5, 1]),
+        customClass: 'dark-grey-interval'
     }, {
-        label: 'Label 2',
+        label: 'On-Campus Student Worker',
         type: TimelineChart.TYPE.INTERVAL,
-        from: new Date([2016, 8, 1]),
-        to: new Date([2016, 9, 12])
+        from: new Date([2017, 8, 1]),
+        to: new Date([2018, 8, 1]),
+        customClass: 'pink-interval'
+    }, {
+        label: 'Peer Advisor',
+        type: TimelineChart.TYPE.INTERVAL,
+        from: new Date([2018, 9, 1]),
+        to: new Date([2019, 4, 1]),
+        customClass: 'grey-interval'
     }]
+},
+{
+    data: [{
+        label: 'First Aid Executive',
+        type: TimelineChart.TYPE.INTERVAL,
+        from: new Date([2016, 1, 1]),
+        to: new Date([2017, 4, 1]),
+        customClass: 'grey-interval'
+    },
+    {
+        label: 'Boot Camp Coordinator',
+        type: TimelineChart.TYPE.INTERVAL,
+        from: new Date([2018, 5, 1]),
+        to: new Date([2019, 4, 1]),
+        customClass: 'dark-pink-interval'
+    }] 
+},
+{
+    data: [{
+        label: 'CEPT Student Worker',
+        type: TimelineChart.TYPE.INTERVAL,
+        from: new Date([2015, 11, 1]),
+        to: new Date([2016, 4, 1]),
+        customClass: 'grey-interval'
+    }] 
 }];
 const timeline = new TimelineChart(element, data, {
     enableLiveTimer: true,
     tip: function(d) {
-        return d.at || `${d.from}<br>${d.to}`;
+        return d.label;
     }
-}).onVizChange(e => console.log(e));
+});
+// .onVizChange(e => console.log(e))
+
+
+
+function tooltip(label) {
+    // $('#chart-text')
+}

@@ -128,6 +128,14 @@ h4 {
 
 .experience-page {
     width: 100%;
+    text-align: center;
+}
+
+#chart-text, .experience-page p {
+	height: 40px;
+	margin: 30px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
 }
 
 .skills-page, .experience-page {
@@ -238,6 +246,16 @@ h4 {
 rect.interval.grey-interval {
     fill: #505452 !important;
     stroke: #505452 !important;
+}
+
+rect.interval.dark-grey-interval {
+    fill: #2d2f2e !important;
+    stroke: #2d2f2e !important;
+}
+
+rect.interval.light-grey-interval {
+    fill: #918a83 !important;
+    stroke: #918a83 !important;
 }
 
 rect.interval.pink-interval {
