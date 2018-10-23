@@ -16,20 +16,28 @@ function toggle(isTech) {
 		$("#personalskills").removeClass('active-custom');
 		$("#techskills").addClass('active-custom');
 		$("#personalskills").addClass('inactive-custom');
-		technicalChart();
+        $("#bar-chart-horizontal-personal").css("display","none");
+        $("#bar-chart-horizontal-technical").css("display","block");
 	}
 	else {
 		$("#techskills").removeClass('active-custom');
 		$("#personalskills").removeClass('inactive-custom');
 		$("#techskills").addClass('inactive-custom');
 		$("#personalskills").addClass('active-custom');
-		personalChart();		
+        $("#bar-chart-horizontal-technical").css("display","none");
+        $("#bar-chart-horizontal-personal").css("display","block");
 	}
+}
+
+function drawCharts() {
+    technicalChart();
+    personalChart();
 }
 
 
 function personalChart() {
-	new Chart(document.getElementById("bar-chart-horizontal"), {
+    console.log("personalChart");
+	new Chart(document.getElementById("bar-chart-horizontal-personal"), {
 	    type: 'horizontalBar',
 	    data: {
 	      labels: ["Participatory Planning Methods", "Field Surveys & Data Analysis", "Compilation & Report Writing", "Research & Documentation", "Accustomed with Teamwork", "LEED Green Building Certification", "Data Visualization and Presentations", "Event Organization and Resources Management"],
@@ -65,7 +73,8 @@ function personalChart() {
 }
 
 function technicalChart() {
-	new Chart(document.getElementById("bar-chart-horizontal"), {
+    console.log("technicalChart");
+	new Chart(document.getElementById("bar-chart-horizontal-technical"), {
 	    type: 'horizontalBar',
 	    data: {
 	      labels: ["ArcGIS (ESRI software and online version)", "Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign", "AutoCAD 2D", "SketchUp", "Microsoft Office Suite (Word, PowerPoint, Excel, Outlook)", "Other Mapping Software (CartoDB, Mapbox, GeoDa)"],
