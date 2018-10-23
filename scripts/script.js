@@ -247,6 +247,20 @@ const timeline = new TimelineChart(element, data, {
 
 
 
-function tooltip(label) {
-    // $('#chart-text')
+function showText(label) {
+    if(json[label]) {
+        var e = json[label];
+        var link = e["link"];
+        if (link != "") {
+            $("#chart-text-link").attr("href", "link");
+            $("#chart-text-link").css("display", "block");
+        }
+        else {
+            $("#chart-text-link").css("display", "none");
+        }
+        console.log(e["text"]);
+        console.log(e["title"]);
+        $("#chart-text").html(e["text"]);
+        $("#chart-text-header").html(e["title"]);
+    }
 }
